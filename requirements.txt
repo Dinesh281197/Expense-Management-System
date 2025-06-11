@@ -6,3 +6,4 @@ streamlit==1.45.1
 requests==2.32.3
 pandas==2.2.3
 uvicorn==0.34.2
+altair==5.5.0
