@@ -5,22 +5,20 @@ import streamlit as st
 
 st.title("Expense Management System")
 
-API_URL =   " http://127.0.0.1:8000"
+API_URL =   "http://127.0.0.1:8000"
 
 def add_update_tab():
-
+    # --- 1. Select Date ---
     selected_date = st.date_input("Enter Date:", datetime(2024, 8, 2), label_visibility='collapsed')
 
+    # --- 2. Initialize Session State ---
     if "num_rows" not in st.session_state:
         st.session_state.num_rows = 5
-
-
     if "previous_date" not in st.session_state:
         st.session_state.previous_date = None
 
-
+    # --- 3. Fetch existing expenses from backend ---
     response = requests.get(f"{API_URL}/expenses/{selected_date}")
-
     if response.status_code == 200:
         existing_expenses = response.json()
         # st.write(existing_expenses)
@@ -28,19 +26,22 @@ def add_update_tab():
         st.error("failed to retrieve responses")
         existing_expenses = []
 
+    # --- 4. Reset number of rows if date has changed ---
     if st.session_state.previous_date != selected_date:
         st.session_state.num_rows = max(len(existing_expenses), 5)
         st.session_state.previous_date = selected_date
 
-        # Button to add more rows (outside form)
+    # --- 5. Button to add more rows ---
     if st.button("+ Add Cell"):
         st.session_state.num_rows += 1
 
+    # --- 6. Define category list ---
     categories=['Entertainment','Shopping','Food','Other','Rent','GYM', 'Investment']
 
+    # --- 7. Begin form ---
     with st.form(key = "expense_form"):
 
-
+        # Subheaders
         col1, col2, col3 = st.columns(3)
         with col1:
             st.subheader("Amount")
@@ -49,11 +50,12 @@ def add_update_tab():
         with col3:
             st.subheader("Notes")
 
-
+        # Store updated expense entries
         updated_expenses = []
 
+        # --- 8. Render input fields ---
         for i in range(st.session_state.num_rows):
-
+            # Prefill with existing or default values
             if i < len(existing_expenses):
                 amount = existing_expenses[i]["amount"]
                 category = existing_expenses[i]["category"]
@@ -78,6 +80,7 @@ def add_update_tab():
 
         submit_button = st.form_submit_button()
 
+        # --- 9. Handle form submission ---
         if submit_button:
 
             filtered_values = [expense for expense in updated_expenses if expense['amount']>0 ]
