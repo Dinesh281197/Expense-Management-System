@@ -1,0 +1,27 @@
+# Ignore secret files
+.env
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+env/
+*.egg-info/
+
+# Ignore log files
+*.log
+
+# Ignore PyCharm project settings
+.idea/
+
+# Ignore test cache
+.pytest_cache/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
