@@ -102,7 +102,7 @@ You can find the MySQL database schema used in this project in the 📂 ['databa
 ## 📌 Project Walkthrough
 
 Want to understand how the project works and the problems it solves?  
-Check out my [LinkedIn post](your-post-link) where I shared the complete breakdown and presentation slides.
+Check out my [LinkedIn post](https://www.linkedin.com/posts/sdk021_expense-management-system-web-application-activity-7339248722163236864-rG14?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMfozgBZJbmOcSSgCvgIT-_mfl_4BK1R4o) where I shared the complete breakdown and presentation slides.
 
 ---
 
