@@ -79,6 +79,3 @@ def insert_expense(expense_date, amount, category, notes):
                        (expense_date, amount, category, notes))
 
 
-
-
-# print("DB Host:", os.getenv("DB_HOST"))

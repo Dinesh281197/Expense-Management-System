@@ -36,7 +36,6 @@ def analysis_by_month_tab():
             df['Total(₹)'] = df['Total(₹)'].map('{:.2f}'.format)
             df['Percentage'] = df['Percentage'].map('{:.0f}'.format).astype(str) + '%'
 
-
             df.set_index('Month Number',inplace=True)
             df.index.name = None
             st.table(df)

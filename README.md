@@ -14,6 +14,15 @@ This is an **Expense Management System** consisting of a **Streamlit frontend** 
 
 ---
 
+## 🧱 System Architecture
+
+The following diagram illustrates the high-level architecture of the Expense Management System.  
+It shows how the frontend, backend, and database components interact with each other.
+
+![System Architecture](assets/project_architecture.png)
+
+---
+
 ## 🚀 Features
 
 - 📅 Add and update expenses by date
@@ -23,10 +32,21 @@ This is an **Expense Management System** consisting of a **Streamlit frontend** 
 
 ---
 
-##  Screenshots
+### ⚙️ API Documentation (Swagger UI)
 
-### 📝 Add or Update Expenses  
-![Add or Update Expenses](assets/add_update.png)
+The FastAPI backend comes with an interactive API documentation interface powered by **Swagger UI**.
+
+You can explore available endpoints like `GET` and `POST` requests for expenses and analytics.
+
+![API Documentation - Swagger UI](assets/OpenAPI.png)
+
+---
+
+## Project Interface & Visual Overview
+
+
+### 📝 View, Add, or Update Expenses
+![View 0r Add or Update Expenses](assets/view_add_update.png)
 
 ### 📊 Analytics by Category  
 ![Analytics by Category](assets/analytics_by_category.png)
@@ -58,6 +78,16 @@ This is an **Expense Management System** consisting of a **Streamlit frontend** 
    ```commandline
    streamlit run frontend/app.py
    ```
+---- 
+
+## 🗄️ Database Setup
+
+You can find the MySQL database schema used in this project in the 📂 ['database/expense_db_creation.sql'](database/expense_db_creation.sql)
+
+> Note: This schema was provided by Codebasics as part of their Data Analytics Portfolio Project series.
+>
+----
+
 ## 🛠 Tech Stack
 
 - **Frontend**: [Streamlit](https://streamlit.io/)
@@ -69,12 +99,10 @@ This is an **Expense Management System** consisting of a **Streamlit frontend** 
 
 ---
 
-## 🎤 Project Presentation
+## 📌 Project Walkthrough
 
-Want to understand how the project works and what problems it solves?  
-Check out my video explanation here:
-
-[![Watch Presentation](https://img.shields.io/badge/🎬-Watch%20Presentation-blue)](your-video-link)
+Want to understand how the project works and the problems it solves?  
+Check out my [LinkedIn post](your-post-link) where I shared the complete breakdown and presentation slides.
 
 ---
 

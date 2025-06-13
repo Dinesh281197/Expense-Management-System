@@ -7,7 +7,7 @@ st.title("Expense Management System")
 
 API_URL =   "http://127.0.0.1:8000"
 
-def add_update_tab():
+def view_add_update_tab():
     # --- 1. Select Date ---
     selected_date = st.date_input("Enter Date:", datetime(2024, 8, 2), label_visibility='collapsed')
 
